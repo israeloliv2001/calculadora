@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(150deg, #1d2caf, #0c1458);
+    background: var(--bg);
     height: 100vh;
     text-align: center;
     color: #fff;
@@ -14,7 +14,7 @@ body {
 
 .box {
     position: absolute;
-    background-color: #3d3939c0;
+    background-color: var(--calc-bg);
     top: 50%;
     left: 50%;
     transform: translate(-50, -50);
@@ -28,8 +28,8 @@ button {
     font-size: 25px;
     cursor: pointer;
     border: none;
-    background-color: #777777;
-    color: #fff;
+    background-color: var(--button-bg);
+    color: var(--text);
 }
 
 button:hover {
@@ -37,10 +37,47 @@ button:hover {
 }
 
 .tela {
-    background-color: white;
+    background-color: var(--screen-bg);
     height: 35px;
-    color: #000;
+    color: var(--text);
     font-size: 25px;
     text-align: end;
     margin: 3px;
+}
+
+@media (max-width: 400px) {
+    .tela {
+        font-size: 1.5rem;
+    };
+    button {
+        padding: 15px;
+        font-size: 1.2rem;
+    };
+};
+
+prefers-colors-scheme
+
+:root {
+    --bg: #ffffff;
+    --calc-bg: #f1f1f1;
+    --screen-gb: #ffffff;
+    --text: #000000;
+    --button-bg: #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --bg: #121212;
+        --calc-bg: #1e1e1e;
+        --screen-bg: #000000;
+        --text: #ffffff;
+        --button-bg: #333333;
+    }
+}
+
+body,
+.box
+.tela,
+button {
+    transition: 0.3s;
 }
