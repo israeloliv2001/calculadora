@@ -81,3 +81,14 @@ body,
 button {
     transition: 0.3s;
 }
+
+@media (max-width: 480px) {
+    .box {
+        width: 95%;
+    }
+
+    button {
+        padding: 18px;
+        font-size: 1.3rem;
+    }
+}
