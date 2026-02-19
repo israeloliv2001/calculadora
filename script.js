@@ -23,3 +23,7 @@ function calcular() {
         document.querySelector('.tela').innerHTML = 'Erro';
     };
 };
+
+function toggleTheme() {
+    document.body.classList.toggle('light');
+};
