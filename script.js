@@ -25,5 +25,5 @@ function calcular() {
 };
 
 function toggleTheme() {
-    document.body.classList.toggle('light');
+    document.body.classList.toggle('Dark');
 };
