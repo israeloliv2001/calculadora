@@ -1,12 +1,9 @@
 body{
+     margin: 0;
      height: 100vh;
+     display: grid;
+     place-items: center;
 }
-
-
-
-
-
-
 .container-button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
