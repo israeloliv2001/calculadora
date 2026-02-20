@@ -11,6 +11,11 @@ body {
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
 }
+table {
+    width: 100%;
+    border-spacing: 8px;
+    table-layout: fixed;
+}
 
 
 .box {
@@ -22,17 +27,24 @@ body {
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 20px;
+    width: 90%;
+    max-width: 320px;
 }
 
 
 button {
-    width: 50px;
+    width: 100%;
     height: 50px;
     font-size: 25px;
     cursor: pointer;
     border: none;
     background-color: var(--button-bg);
     color: var(--text);
+}
+.btn-igual {
+    height: 100%; 
+    background-color: #f08710;
+    min-height: 108px;
 }
 
 button.equal-btn {
@@ -79,21 +91,33 @@ button:hover {
 
 .tela {
     background-color: var(--screen-bg);
-    height: 35px;
+    height: 60px;
     color: var(--text);
-    font-size: 25px;
+    font-size: 35px;
     text-align: end;
-    margin: 3px;
+    margin: 5px 0 15px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
 }
 
 @media (max-width: 400px) {
-    .tela {
-        font-size: 1.5rem;
-    };
-    button {
+    .box{
+        width: 95%;
         padding: 15px;
-        font-size: 1.2rem;
+    }
+    .tela {
+        height: 70px;
+        font-size: 2rem;
     };
+    .button {
+        width: 65px;
+        height: 65px;
+        font-size: 1.5rem;
+       };
 };
 
 :root {

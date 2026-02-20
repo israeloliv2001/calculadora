@@ -2,7 +2,7 @@
 <html lang="pt_BR">
     <head>
         <meta charset="UTF-8">
-        <meta name=" viewport" content="width=device-width, initial-scale1.0">
+        <meta name="viewport" content="width=device-width, initial-scale1.0">
         <title>Calculadora</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -36,10 +36,12 @@
                     <td><button onclick="inserir('1')">1</button></td>
                     <td><button onclick="inserir('2')">2</button></td>
                     <td><button onclick="inserir('3')">3</button></td>
-                    <td rowspan="2"><button style="height: 102px; background-color: #f08710;" onclick="calcular()">=</button></td>
+                    <td rowspan="2">
+                        <button class="btn-igual" onclick="calcular()">=</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button style="width: 102px;"onclick="inserir('0')">0</button></td>
+                    <td colspan="2">
+                        <button onclick="inserir('0')">0</button></td>
                     <td><button onclick="inserir('.')">.</button></td>
                 </tr>
             </table>
