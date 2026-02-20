@@ -8,9 +8,7 @@ function limpar() {
 
 function back() {
     let tela = document.querySelector('.tela').innerHTML;
-    document.querySelector('.tela').innerHTML = tela.substring(0, tela.length -1
-
-    );
+    document.querySelector('.tela').innerHTML = tela.substring(0, tela.length -1);
     
 };
 
@@ -25,5 +23,15 @@ function calcular() {
 };
 
 function toggleTheme() {
-    document.body.classList.toggle('Dark');
+   const isLight = 
+    document.body.classList.toggle('light');
+
+     const btn =
+     document.getElementById('theme-btn');
+
+     btn.innerHTML = isLight ? '☀️' : '🌙';
+
+
 };
+
+   

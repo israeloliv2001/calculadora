@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <button onclick="toggleTheme()">🌗</button>
+        <button id="theme-btn" class="theme-toggle" onclick="toggleTheme()">
+            <span class="icon">☀️</span>
+        </button>
         <div class="box">
             <h1>Calculadora</h1>
             <div class="tela"></div>
@@ -40,10 +42,9 @@
                     <td colspan="2"><button style="width: 102px;"onclick="inserir('0')">0</button></td>
                     <td><button onclick="inserir('.')">.</button></td>
                 </tr>
-                
             </table>
             <span>&copy;Feito Por Israel 2026</span>
         </div>
+        <script src="script.js"></script>
     </body>
-    <script src="script.js"></script>
 </html>

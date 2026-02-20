@@ -16,6 +16,7 @@ body {
 .box {
     position: absolute;
     background-color: var(--calc-bg);
+    box-shadow: 0px 10px 30px rgba(10, 10, 10, 0.1);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -34,8 +35,46 @@ button {
     color: var(--text);
 }
 
+button.equal-btn {
+    background-color: #ff9500;
+    color: white;
+}
+
+body.ligth button.equal-btn {
+    background-color: #fb8c00;
+}
+
 button:hover {
-    background-color: #0c1458;
+    background-color: #2d3369;
+}
+
+#theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+#theme-btn:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+#theme-btn:active {
+    transform: scale(0.9);
 }
 
 .tela {
@@ -65,7 +104,13 @@ button:hover {
     --button-bg: #e0e0e0;
 }
 
-@media (prefers-color-scheme: dark) {
+body.light {
+    --bg: #d1d5db;
+    --calc-bg: #e5e7eb;
+    --screen-bg: #f3f4f6;
+    --text:#374151;
+    --button-bg: #d1d5db;
+}
     :root{
         --bg: #121212;
         --calc-bg: #1e1e1e;
@@ -73,7 +118,7 @@ button:hover {
         --text: #ffffff;
         --button-bg: #333333;
     }
-}
+
 
 body,
 .box
@@ -81,6 +126,7 @@ body,
 button {
     transition: 0.3s;
 }
+
 
 @media (max-width: 480px) {
     .box {
@@ -92,3 +138,4 @@ button {
         font-size: 1.3rem;
     }
 }
+
